@@ -64,7 +64,6 @@
             }
         },
         "transport": {
-            "protocol": "serial_usart",
             "sync": {
                 "matrix_state": true
             },
@@ -306,34 +305,30 @@
     },
     "rgb_matrix": {
         "driver": "ws2812",
-        "max_brightness": 50,
         "animations": {
+            "none": true,
+            "solid_color": true,
             "alphas_mods": true,
             "gradient_up_down": true,
             "gradient_left_right": true,
             "breathing": true,
-            "band_sat": true,
             "band_val": true,
-            "band_pinwheel_sat": true,
             "band_pinwheel_val": true,
-            "band_spiral_sat": true,
             "band_spiral_val": true,
             "cycle_all": true,
             "cycle_left_right": true,
             "cycle_up_down": true,
-            "rainbow_moving_chevron": true,
             "cycle_out_in": true,
             "cycle_out_in_dual": true,
+            "rainbow_moving_chevron": true,
             "cycle_pinwheel": true,
             "cycle_spiral": true,
             "dual_beacon": true,
             "rainbow_beacon": true,
             "rainbow_pinwheels": true,
+            "flower_blooming": true,
             "raindrops": true,
             "jellybean_raindrops": true,
-            "hue_breathing": true,
-            "hue_pendulum": true,
-            "hue_wave": true,
             "pixel_fractal": true,
             "pixel_flow": true,
             "pixel_rain": true,
@@ -350,7 +345,38 @@
             "splash": true,
             "multisplash": true,
             "solid_splash": true,
-            "solid_multisplash": true
-        }
-    }
+            "solid_multisplash": true,
+            "starlight": true,
+            "starlight_dual_hue": true,
+            "starlight_dual_sat": true,
+            "riverflow": true,
+            "effect_max": true
+        },
+        "default": {
+            "animation": "riverflow",
+            "on": true,
+            "hue": 35,
+            "sat": 255,
+            "val": 255,
+            "speed": 100
+        },
+        "hue_steps": 2,
+        "sleep": false,
+        "max_brightness": 255,
+    },
+    "combo": {
+        "term": 40
+    },
+    "mouse_key": {
+        "delay": 1,
+        "interval": 8,
+        "max_speed": 2,
+        "time_to_max": 100,
+        "wheel_delay": 1,
+        "move_delta": 8
+    },
+    "oneshot": {
+        "tap_toggle": 3,
+        "timeout": 10000
+    },
 }
